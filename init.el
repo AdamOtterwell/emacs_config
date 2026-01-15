@@ -96,13 +96,18 @@
 
 ;; web stuff
 (use-package web-mode
-  :ensure t
-  :mode
-  (("\\.phtml\\'" . web-mode)
-   ("\\.php\\'" . web-mode)
-   ("\\.tpl\\'" . web-mode)
-   ("\\.[agj]sp\\'" . web-mode)
-   ("\\.as[cp]x\\'" . web-mode)
-   ("\\.erb\\'" . web-mode)
-   ("\\.mustache\\'" . web-mode)
-   ("\\.djhtml\\'" . web-mode)))
+  :ensure t ; Automatically installs the package if not present
+  :mode (("\\.html\\'\\." . web-mode) ; Associates web-mode with .html files
+         ("\\.css\\'\\." . web-mode)  ; Associates web-mode with .css files
+         ("\\.js\\'\\." . web-mode)   ; Associates web-mode with .js files
+         ("\\.phtml\\'\\." . web-mode) ; Associates web-mode with .phtml files
+         ("\\.php\\'\\." . web-mode)  ; Associates web-mode with .php files
+         ("\\.erb\\'\\." . web-mode)  ; Associates web-mode with .erb files
+         ("\\.mustache\\'\\." . web-mode) ; Associates web-mode with .mustache files
+         ("\\.djhtml\\'\\." . web-mode)) ; Associates web-mode with .djhtml files
+  :config
+  ;; Add any custom settings here. Example:
+  (setq web-mode-markup-indent-offset 4
+        web-mode-css-indent-offset 4
+        web-mode-code-indent-offset 4))
+
