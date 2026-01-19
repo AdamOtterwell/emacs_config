@@ -106,7 +106,7 @@
          ("\\.mustache\\'\\." . web-mode) ; Associates web-mode with .mustache files
          ("\\.djhtml\\'\\." . web-mode)) ; Associates web-mode with .djhtml files
   :config
-  ;; Add any custom settings here. Example:
+;;some indentation prefrences
   (setq web-mode-markup-indent-offset 4
         web-mode-css-indent-offset 4
         web-mode-code-indent-offset 4))
